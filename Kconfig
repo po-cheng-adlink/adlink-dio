@@ -1,0 +1,12 @@
+#
+# Adlink Misc devices/control driver
+#
+
+comment "Adlink DI/DO Control Driver"
+
+config ADLINK_DIO
+	depends on ARCH_TEGRA_18x_SOC || ARCH_TEGRA_210_SOC || ARCH_TEGRA_19x_SOC
+	default n
+	tristate "Adlink DI/DO Control Driver"
+	---help---
+	  Enable this to support Adlink DI/DO control by sysfs.
